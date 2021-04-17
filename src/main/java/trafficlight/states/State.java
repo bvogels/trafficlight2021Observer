@@ -8,7 +8,7 @@ public abstract class State {
 
     public abstract String getColor();
 
-    public String getSting(){
+    public String getString(){
         return getColor();
     }
 }
