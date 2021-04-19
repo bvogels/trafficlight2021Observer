@@ -30,9 +30,24 @@ public class TrafficLightGui extends JFrame implements ActionListener {
     }
 
     private void initLights(TrafficLightCtrl ctrl) {
-        //TODO implement a part of the pattern here
-        //create the TrafficLight
-        //connect subject and observer
+
+        // This part determines the color of the light - my mistake was to think that the
+        // traffic light is a single instance, where it is a collection of three distinct
+        // lights.
+
+        green = new TrafficLight(Color.green);
+        red = new TrafficLight(Color.red);
+        yellow = new TrafficLight(Color.yellow);
+
+
+        /* The following methods are implemented in TrafficLightCtrl. They add observers
+        of the respective color to the list of observers, maintained by the subject class via
+        the state class, which extends state class.
+         */
+
+        ctrl.getGreenState().addObservers(green);
+        ctrl.getRedState().addObservers(red);
+        ctrl.getYellowState().addObservers(yellow);
 
     }
 
