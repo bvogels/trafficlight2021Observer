@@ -1,7 +1,10 @@
 package trafficlight.ctrl;
 
+import trafficlight.gui.Observer;
 import trafficlight.gui.TrafficLightGui;
 import trafficlight.states.State;
+
+import javax.security.auth.Subject;
 
 public class TrafficLightCtrl {
 
@@ -109,4 +112,5 @@ public class TrafficLightCtrl {
     public void stop() {
         doRun = false;
     }
+
 }
